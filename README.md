@@ -59,6 +59,8 @@ const popup = new mapboxgl.Popup({ offset: [0, -15] })
 
   // Code from the next step will go here.
 });
+      
+      map.addControl(new mapboxgl.NavigationControl());
 
     </script>
   </body>
