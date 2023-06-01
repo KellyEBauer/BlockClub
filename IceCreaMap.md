@@ -29,7 +29,7 @@
       // Replace YOUR_STYLE_URL with your style URL.
       style: 'mapbox://styles/kellybauer/clidhqb3o004w01p1befn9vad', 
       center: [-87.648336, 41.876314],
-      zoom: 10.94
+      zoom: 10
     });
 
     /* 
