@@ -4,6 +4,9 @@
     <meta charset='utf-8' />
     <title>Ice Cream Spots in Chicago</title>
     <meta name='viewport' content='width=device-width, initial-scale=1' />
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
     <style>
@@ -61,6 +64,19 @@ const popup = new mapboxgl.Popup({ offset: [0, -15] })
 });
 
 map.addControl(new mapboxgl.NavigationControl());
+
+map.on('load', () => {
+  const geocoder = new MapboxGeocoder({
+    // Initialize the geocoder
+    accessToken: mapboxgl.accessToken, // Set the access token
+    mapboxgl: mapboxgl, // Set the mapbox-gl instance
+    zoom: 13, // Set the zoom level for geocoding results
+    placeholder: 'Enter an address or place name', // This placeholder text will display in the search bar
+    bbox: [-87.993531,41.615310,-87.503266,42.035903] // Set a bounding box
+  });
+  // Add the geocoder to the map
+  map.addControl(geocoder, 'top-left'); // Add the search box to the top left
+});
 
     </script>
   </body>
