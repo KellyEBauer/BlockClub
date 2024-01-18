@@ -28,7 +28,6 @@
     // The value for 'accessToken' begins with 'pk...'
     mapboxgl.accessToken = 'pk.eyJ1Ijoia2VsbHliYXVlciIsImEiOiJjbGk0d3h5YnEwMnk2M3JyNGRpeXh1MW4xIn0.XLy3Mw9CoXXbJvehWwuI6w'; 
     const map = new mapboxgl.Map({
-      container: 'map',
       // Replace YOUR_STYLE_URL with your style URL.
       style: 'mapbox://styles/kellybauer/clidhqb3o004w01p1befn9vad', 
       center: [-87.648336, 41.876314],
