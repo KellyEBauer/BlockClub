@@ -23,7 +23,6 @@
     </style>
   </head>
   <body>
-    <div id='map'></div>
     <script>
     // The value for 'accessToken' begins with 'pk...'
     mapboxgl.accessToken = 'pk.eyJ1Ijoia2VsbHliYXVlciIsImEiOiJjbGk0d3h5YnEwMnk2M3JyNGRpeXh1MW4xIn0.XLy3Mw9CoXXbJvehWwuI6w'; 
